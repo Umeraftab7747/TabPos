@@ -59,7 +59,7 @@ export class DrawerScreen extends Component {
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => {
-            this.props.navigation.navigate('Records');
+            this.props.navigation.navigate('Screenthree');
           }}
           style={styles.ItemView}>
           <View style={styles.iconContainer}>
@@ -71,7 +71,7 @@ export class DrawerScreen extends Component {
             />
           </View>
           <View style={styles.txtContainer}>
-            <Text style={styles.txt}>Records</Text>
+            <Text style={styles.txt}>CashDrawer</Text>
           </View>
         </TouchableOpacity>
         <TouchableOpacity style={styles.ItemView}>

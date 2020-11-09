@@ -20,7 +20,11 @@ export class Screentwo extends Component {
       <View style={styles.Conatiner}>
         {/* leftCotnainer */}
         <View style={styles.leftContainer}>
-          <Navbar2 />
+          <Navbar2
+            press={() => {
+              this.props.navigation.openDrawer();
+            }}
+          />
           {/* Left Container 1 */}
           <View style={styles.topLeftCotnainer}>
             <Text style={styles.topLeftContainerText}>19 Dec 2020</Text>

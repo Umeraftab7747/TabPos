@@ -6,6 +6,7 @@ const Drawer = createDrawerNavigator();
 import {DrawerScreen} from '../screens/DrawerScreen';
 import {Screenone} from '../screens';
 import {Screentwo} from '../screens';
+import {Screenthree} from '../screens';
 
 export const DrawerNavigator = () => {
   return (
@@ -14,6 +15,7 @@ export const DrawerNavigator = () => {
       drawerContent={(props) => <DrawerScreen {...props} />}>
       <Drawer.Screen name="Screenone" component={Screenone} />
       <Drawer.Screen name="Screentwo" component={Screentwo} />
+      <Drawer.Screen name="Screenthree" component={Screenthree} />
     </Drawer.Navigator>
   );
 };
