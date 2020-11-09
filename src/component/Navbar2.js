@@ -11,7 +11,9 @@ export class Navbar2 extends Component {
           <Icon name={'menu'} type="ionicon" size={45} color="#000" />
         </TouchableOpacity>
         {/* middle */}
-        <View style={styles.middle}></View>
+        <View style={styles.middle}>
+          <Text style={styles.midtxt}>{this.props.text}</Text>
+        </View>
         {/* left */}
         <View style={styles.left}></View>
         {/* end */}
@@ -43,14 +45,14 @@ const styles = StyleSheet.create({
   },
   middle: {
     // backgroundColor: 'gold',
-    width: '10%',
+    width: '30%',
     height: '100%',
 
     justifyContent: 'center',
   },
   midtxt: {
     color: 'black',
-    fontWeight: 'bold',
+
     fontSize: h('2.8%'),
   },
 });
