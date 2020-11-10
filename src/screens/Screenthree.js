@@ -107,9 +107,9 @@ export class Screenthree extends Component {
                 underlineColorAndroid={'#0005'}
                 placeholder={'Pass amount'}
               />
-              <View style={styles.ButtonPress}>
+              <TouchableOpacity style={styles.ButtonPress}>
                 <Text style={styles.BtnAddText}>ADD</Text>
-              </View>
+              </TouchableOpacity>
             </View>
             <View style={styles.ExpenseRecpit}>
               <View

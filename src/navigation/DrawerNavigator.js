@@ -7,6 +7,8 @@ import {DrawerScreen} from '../screens/DrawerScreen';
 import {Screenone} from '../screens';
 import {Screentwo} from '../screens';
 import {Screenthree} from '../screens';
+import {screenfour} from '../screens';
+import {ScreenFive} from '../screens';
 
 export const DrawerNavigator = () => {
   return (
@@ -16,6 +18,8 @@ export const DrawerNavigator = () => {
       <Drawer.Screen name="Screenone" component={Screenone} />
       <Drawer.Screen name="Screentwo" component={Screentwo} />
       <Drawer.Screen name="Screenthree" component={Screenthree} />
+      <Drawer.Screen name="screenfour" component={screenfour} />
+      <Drawer.Screen name="ScreenFive" component={ScreenFive} />
     </Drawer.Navigator>
   );
 };

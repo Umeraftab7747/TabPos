@@ -4,27 +4,12 @@ import {w, h} from 'react-native-responsiveness';
 import {Icon} from 'react-native-elements';
 
 export class DrawerScreen extends Component {
-  state = {userid: '', data: []};
-  componentDidMount = async () => {
-    AsyncStorage.getItem('userData', (error, data) => {
-      const userData = JSON.parse(data);
-      if (userData !== null) {
-        this.setState({
-          userid: userData.id,
-        });
-        this.userinfo();
-      } else {
-        console.warn('No data found');
-      }
-    });
-  };
-
   render() {
     return (
       <View style={styles.container}>
         <TouchableOpacity
           onPress={() => {
-            this.props.navigation.navigate('Bottomtab');
+            this.props.navigation.navigate('Screenone');
           }}
           style={[styles.ItemView, {marginTop: h('1%')}]}>
           <View style={styles.iconContainer}>
@@ -74,17 +59,38 @@ export class DrawerScreen extends Component {
             <Text style={styles.txt}>CashDrawer</Text>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.ItemView}>
+        <TouchableOpacity
+          onPress={() => {
+            this.props.navigation.navigate('screenfour');
+          }}
+          style={styles.ItemView}>
           <View style={styles.iconContainer}>
             <Icon
-              name={'information-circle'}
+              name={'archive-outline'}
               type={'ionicon'}
               color={'blue'}
               size={h('4%')}
             />
           </View>
           <View style={styles.txtContainer}>
-            <Text style={styles.txt}>About us</Text>
+            <Text style={styles.txt}>Inventory</Text>
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            this.props.navigation.navigate('ScreenFive');
+          }}
+          style={styles.ItemView}>
+          <View style={styles.iconContainer}>
+            <Icon
+              name={'pricetags-outline'}
+              type={'ionicon'}
+              color={'blue'}
+              size={h('4%')}
+            />
+          </View>
+          <View style={styles.txtContainer}>
+            <Text style={styles.txt}>Item's</Text>
           </View>
         </TouchableOpacity>
       </View>
